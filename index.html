@@ -79,9 +79,26 @@
 </head>
 <body>
     <div id="main">
-        <img src="KK_Karlskrona.png" alt="Logo Image">
+        <img src="">
         <h1>Kinky Night 2021</h1>
         <h2>Mer info inom kort. </h2>
+        <h2>kk@kinkynight.com</h2>
     </div>
+<script>
+const imageArray = [
+	"https://i.imgur.com/kkWmwCZ.jpg",
+        "https://i.imgur.com/5tH5FOq.jpg",
+        "https://i.imgur.com/Vi8oV4e.jpg"
+];
+
+const image = document.querySelector("img");
+
+window.onload = () => generateRandomPicture(imageArray);
+
+function generateRandomPicture(array){
+	let randomNum = Math.floor(Math.random() * array.length); 
+	image.setAttribute("src", array[randomNum]);
+}
+</script>
 </body>
 </html>
