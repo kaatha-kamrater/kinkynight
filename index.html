@@ -13,10 +13,12 @@
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
+    <script src="particles.js"></script>
   </head>
 
-  <body class="text-center">
 
+  <body id="main" class="text-center">
+    <div id="particles-js"></div>
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -28,7 +30,7 @@
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Kinky Night 2023</h1>
         
-        <p class="lead">
+        <p class="lead" style="position: relative;;z-index:999;">
           <a href="https://forms.gle/R93Bn2VUQWY2TMwC7" class="btn btn-lg btn-secondary">Fyll i intresseanmälan</a>
         </p>
       </main>
@@ -39,4 +41,7 @@
         </div>
       </footer>
     </div>
+    <script>particlesJS.load('particles-js', 'config.json', function() {
+      console.log('callback - particles.js config loaded');
+    });</script>
 </body></html>
