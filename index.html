@@ -1,55 +1,64 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Kinky Night 2023">
-    <meta name="author" content="Kååtha Kamrater">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinky Night!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Latest tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+</head>
+<body class="bg-gray-800 relative"> <!-- Dark Grey Background -->
+  <!-- Particle Background -->
+  <div id="tsparticles" class="absolute top-0 left-0 w-full h-full -z-10"></div>
 
-    <title>Kinky Night 2023</title>
+  <!-- Header with Logo -->
+  <header class="w-full py-4 px-8 text-center">
+    <img src="https://kaatha-kamrater.se/images/pages/KK_hu5e23650001c82bd0a8d73c43c23fc935_99147_576x576_fill_q90_h2_box_smart1_3.webp" alt="Party Logo" class="mx-auto w-24 md:w-32"> <!-- Add your logo here -->
+  </header>
 
-    <link rel="canonical" href="https://kinkynight.com">
-
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-    <script src="particles.js"></script>
-    <style> #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }</style>
-  </head>
-
-
-  <body id="main" class="text-center">
-    <div id="particles-js"></div>
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          
-          
-        </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading">Kinky Night 2023</h1>
-        
-        <p class="lead" style="position: relative;;z-index:999;">
-          Välkommen till Kinky Night, en oförglömlig studentfest, arrangerad av Kååtha Kamrater.
-          För mer information om evenemanget, <u><a href="https://kaatha-kamrater.se/evenemang/">klicka här!</a></u><br>
-          <a href="https://forms.gle/BTJYQTiN8fsyqZKp6" class="btn btn-lg btn-secondary">Fyll i intresseanmälan</a>
-        </p>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner" style="position: relative;;z-index:999;">
-          <p>Kinky Night 2023 av <a href="https://kaatha-kamrater.se">Kååtha Kamrater</a>.</p>
-        </div>
-      </footer>
+  <!-- Main Content -->
+  <section class="min-h-screen flex flex-col items-center text-white">
+    <h1 class="text-3xl md:text-6xl font-bold mb-8">Snart Kinky Night!</h1>
+    <p class="text-lg text-center text-wrap md:text-2xl mb-6">Snart är det dags för Kinky Night! På denna sida kommer du snart att kunna hitta förfest-spel, tips på musik och annat kul som garanterar en bra start på kvällen!</p>
+    <div class="flex space-x-4 mb-6">
+      <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg md:text-xl hover:bg-blue-600">Spel finns snart!</a>
     </div>
-    <script>particlesJS.load('particles-js', 'config.json', function() {
-      console.log('callback - particles.js config loaded');
-    });</script>
-</body></html>
+    <br>
+    <h1 class="text-3xl md:text-6xl font-bold mb-8">KN Beats</h1>
+    <!-- Spotify Widget -->
+    <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/playlist/1DRcEnrCsMD6rqqlwx7PCO?utm_source=generator&theme=0" 
+      width="300" 
+      height="380" 
+      frameBorder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+  </section>
+
+  <!-- Initialize Particles -->
+  <script>
+    tsParticles.load("tsparticles", {
+      fpsLimit: 60,
+      particles: {
+        number: { value: 100 },
+        size: { value: 3 },
+        move: { enable: true, speed: 0.5 },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        line_linked: {
+        }
+      },
+      interactivity: {
+        events: {
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
