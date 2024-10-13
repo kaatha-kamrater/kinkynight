@@ -1,2 +1,2 @@
 # kinkynight
-Något något, mer info snart...
+Lägg till frågor i nhie.js och pekleken.js ;)

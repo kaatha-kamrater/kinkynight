@@ -1,0 +1,37 @@
+body {
+  font-family: var(--font-family-monospace);
+  background: url("bg.png") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.card .card-header {
+  background-color: #000;
+  color: var(--white);
+}
+.card .list-group-item a {
+  min-height: 50px;
+  color: var(--indigo);
+}
+.card .list-group-item img {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .list-group-item span {
+  padding: 0 60px;
+}
