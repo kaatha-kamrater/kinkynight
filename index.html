@@ -1,80 +1,240 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <title>Kinky Night 2024</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
-<link href="https://fonts.cdnfonts.com/css/lucida-blackletter" rel="stylesheet">
-                
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinky Night 2025 - Snart här</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kinkynight.com">
+    <meta property="og:title" content="Kinky Night 2025 - Snart här">
+    <meta property="og:description" content="Mer info snart om årets mest kinky fest!">
+    <meta property="og:image" content="https://kaatha-kamrater.se/images/pages/KK_hu5e23650001c82bd0a8d73c43c23fc935_99147_576x576_fill_q90_h2_box_smart1_3.webp">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            animation: pulse 3s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+            color: #FFD700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(238, 90, 36, 0.4);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-links {
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2.5s forwards;
+        }
+
+        .social-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-8 d-flex flex-column align-items-center">
-      <img class="rounded-circle mt-4" src="https://kaatha-kamrater.se/images/pages/KK_hu5e23650001c82bd0a8d73c43c23fc935_99147_576x576_fill_q90_h2_box_smart1_3.webp" width="100">
-      <p class="text-center text-white mb-0 mt-3" style="font-family: 'Lucida Blackletter', sans-serif; font-size: 24px;">Kinky Night 2024</p>
-      <div class="card w-100 border-0 shadow mt-4">
-        <ul class="list-group list-group-flush border-0">
-          <li class="list-group-item border-0 text-center p-4">
-            <p><strong>Hallå där!</strong></p>
-            <p class="mb-0">🎉 Snart är det dags för Kinky Night 2024! 🎉 På den här sidan hittar du några roliga partyspel att spela för att kicka igång stämningen! 🎲🥂
-
-              Psst... 👀 Vi har också lagt till årets Spotify-spellista! 🎶💃</p>
-          </li>
-        </ul>
-      </div>
-      <div class="card w-100 border-0 shadow mt-3">
-        <div class="card-header border-0 text-center font-weight-bold" style="font-family: 'Lucida Blackletter', sans-serif;">
-          Partyspelen
-        </div>
-        <ul class="list-group list-group-flush border-0">
-          <li class="list-group-item p-1">
-            <a target="_blank" rel="noopener noreferrer" class="stretched-link d-flex align-items-center text-center" href="/nhie.html" title="Jag har aldrig...">
-              <span class="flex-grow-1"><button type="button" class="btn btn-dark">Jag har aldrig 👀</button></span>
-            </a>
-          </li>
-          <li class="list-group-item p-1">
-            <a target="_blank" rel="noopener noreferrer" class="stretched-link d-flex align-items-center text-center" href="/pekleken.html" title="Pekleken...">
-              <span class="flex-grow-1"><button type="button" class="btn btn-dark">Pekleken 👉👈</button></span>
-            </a>
-          </li>
-          <li class="list-group-item p-1">
-            <a target="_blank" rel="noopener noreferrer" class="stretched-link d-flex align-items-center text-center" href="/treman.html" title="Treman...">
-              <span class="flex-grow-1"><button type="button" class="btn btn-dark">Treman 🎲</button></span>
-            </a>
-          </li>
-          <li class="list-group-item p-1">
-            <a target="_blank" rel="noopener noreferrer" class="stretched-link d-flex align-items-center text-center" href="/ftd.html" title="Fuck the Dealer...">
-              <span class="flex-grow-1"><button type="button" class="btn btn-dark">Fuck the Dealer 🃏</button></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="card w-100 border-0 shadow mt-3">
-        <div class="card-header border-0 text-center font-weight-bold" style="font-family: 'Lucida Blackletter', sans-serif;">
-          Spellistan
-        </div>
-        <ul class="list-group list-group-flush border-0">
-          <li class="list-group-item border-0 p-1">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1DRcEnrCsMD6rqqlwx7PCO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </li>
-        </ul>
-      </div>
-      <ul class="list-unstyled list-inline my-4">
-        <li class="list-inline-item mx-2">
-          <a class="text-white" href="https://instagram.com/kaathakamrater/" target="_blank">
-            <i class="fab fa-instagram fa-2x"></i>
-          </a>
-        </li>
-      </ul>
+    <div class="background-shapes">
+        <div class="shape">✨</div>
+        <div class="shape">🎉</div>
+        <div class="shape">💫</div>
     </div>
-  </div>
-</div>
-<!-- partial -->
-  <script src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script>
+    
+    <div class="container">
+        <img class="logo" src="https://kaatha-kamrater.se/images/pages/KK_hu5e23650001c82bd0a8d73c43c23fc935_99147_576x576_fill_q90_h2_box_smart1_3.webp" alt="Kinky Night Logo">
+        
+        <h1>Kinky Night 2025</h1>
+        <div class="subtitle">Mer info snart</div>
+        
+        <div class="description">
+            Årets mest kinky fest är på väg! Vi förbereder något helt speciellt för er. Håll utkik för mer information och glöm inte att markera datumet i er kalender.
+        </div>
+        
+        <a href="https://www.facebook.com/events/1049104470712144" target="_blank" class="cta-button">
+            📅 Facebook Event
+        </a>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/kaathakamrater/" target="_blank">📱</a>
+            <a href="mailto:kk@kinkynight.com">✉️</a>
+        </div>
+    </div>
 </body>
 </html>
